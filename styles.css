@@ -1,0 +1,117 @@
+/* Reset and base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+/* Screen reader only utility class for accessibility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Original Feature 1: Sticky header */
+.sticky-header {
+    position: sticky;
+    top: 0;
+    background-color: #1f1f1f;
+    padding: 2rem 1rem;
+    text-align: center;
+    border-bottom: 2px solid #00b4d8;
+    z-index: 100;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.sticky-header h1 {
+    color: #00b4d8;
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+}
+
+.tagline {
+    color: #a0a0a0;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+/* Form Styles */
+#search-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#search-input {
+    flex: 1;
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid #333;
+    border-radius: 25px;
+    background-color: #2c2c2c;
+    color: #fff;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#search-input:focus {
+    border-color: #00b4d8;
+}
+
+#search-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    background-color: #00b4d8;
+    color: #121212;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+#search-button:hover {
+    background-color: #0096b4;
+}
+
+#search-button:active {
+    transform: scale(0.98);
+}
+
+/* Main Content Area */
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Original Feature 2: Result count placeholder */
+#result-count {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #ffb703;
+    font-weight: 500;
+}
+
+/* Required Feature: Responsive Grid */
+#results {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
